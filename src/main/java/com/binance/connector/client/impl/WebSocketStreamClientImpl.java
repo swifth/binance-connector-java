@@ -52,6 +52,10 @@ public class WebSocketStreamClientImpl implements WebSocketStreamClient {
         this.baseUrl = baseUrl;
     }
 
+    public WebSocketConnection connectionOf(int connId) {
+        return connections.get(connId);
+    }
+    
     /**
      * The Aggregate Trade Streams push trade information that is aggregated for a single taker order.
      * <br><br>
